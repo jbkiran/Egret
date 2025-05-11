@@ -86,4 +86,4 @@ See `LICENSE` file for more info.
 
 ## 🙋‍♂️ Author
 
-**Your Name** – [@yourhandle](https://github.com/yourhandle)
+**Kiran JB** – [ https://github.com/jbkiran ]
