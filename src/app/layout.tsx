@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Nunito } from "next/font/google";
 import "./globals.css";
+import { ThemeProvider } from '@/context/ThemeContext'
 
 const nunito = Nunito({
   subsets: ['latin'],
@@ -21,11 +22,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${nunito.variable} antialiased`}
-      >
-        {children}
+    <html lang="en" className="dark">
+      <body className={`${nunito.variable} antialiased min-h-screen`}>
+        <ThemeProvider>
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );

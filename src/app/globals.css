@@ -1,11 +1,38 @@
-@import "tailwindcss/preflight";
-@import "tailwindcss/utilities";
+@import "tailwindcss";
 
-/* Optional Nunito font setup */
-:root {
-  --font-nunito: 'Nunito', sans-serif;
+/* Dark Theme */
+@layer base {
+
+  :root {
+    --color-primary: #000000;
+    --color-secondary: #2B2B2B;
+    --color-background: #A9A9A9;
+    --color-foreground: #F0ECE2;
+    --color-accent: #FF5E0E;
+
+    --font-nunito: 'Nunito', sans-serif;
+  }
+
+  .dark {
+    --color-primary: #F0ECE2;
+    --color-secondary: #A9A9A9;
+    --color-background: #000000;
+    --color-foreground: #2B2B2B;
+    --color-accent: #FF5E0E;
+  }
+
+  .themeOscar {
+    --color-primary: #F6E27F;
+    --color-secondary: #FBE57B;
+    --color-background: #F4B4A5;
+    --color-foreground: #E63946;
+    --color-accent: #1E1E1E;
+  }
 }
 
+
 body {
+  background-color: var(--color-background);
+  color: var(--color-primary);
   font-family: var(--font-nunito);
 }
