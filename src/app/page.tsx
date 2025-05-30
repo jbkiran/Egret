@@ -11,14 +11,16 @@ export default function Home() {
   const [navOpen, setNavOpen] = useState(false);
 
   return (
-    <div className="gap-3 max-w-[1600px] mx-auto flex flex-col md:flex-row px-3 box-border min-h-screen">
+    <div className="gap-3 max-w-[1600px] mx-auto flex flex-col md:flex-row p-3 box-border min-h-screen">
+      
       <button
         onClick={() => setNavOpen(true)}
-        className="lg:hidden absolute top-4 left-4 bg-gray-800 text-white p-2 rounded z-40"
+        className="lg:hidden absolute top-4 right-2 bg-gray-800 text-white p-2 rounded z-40"
         aria-label="Open Menu"
       >
-        ☰
+        &#9776;
       </button>
+      
       <Profile />
       <MainContent section={activeSection}/>
       <NavMenu 
