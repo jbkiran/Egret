@@ -33,3 +33,17 @@ export const sectionContent = {
     content: '(<div className="space-y-4">{/* Add Certifications here */}</div>)',
   },
 };
+
+export const profileData = {
+  name: "Kiran JB",
+  title: "Senior Software Engineer",
+  email: "kiranjb@hotmail.com",
+  phone: "+91-9633770528",
+  location: "Thiruvananthapuram",
+  profileImage: "profile.webp",
+  resumeUrl: "resume2025.pdf",
+  socialLinks: {
+    linkedin: "https://linkedin.com/in/jbkiran",
+    github: "https://github.com/jbkiran",
+  },
+};

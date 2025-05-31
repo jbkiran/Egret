@@ -15,7 +15,7 @@ export default function Home() {
       
       <button
         onClick={() => setNavOpen(true)}
-        className="lg:hidden absolute top-4 right-2 bg-gray-800 text-white p-2 rounded z-40"
+        className="lg:hidden absolute top-4 right-2 bg-[var(--color-background)] text-white p-2 rounded-lg z-40 mr-3 mt-1"
         aria-label="Open Menu"
       >
         &#9776;
