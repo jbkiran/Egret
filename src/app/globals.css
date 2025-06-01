@@ -6,9 +6,13 @@
   :root {
     --color-primary: #000000;
     --color-secondary: #2B2B2B;
-    --color-background: #A9A9A9;
-    --color-foreground: #F0ECE2;
+    --color-background: #F8F9FA;
+    --color-foreground:  #FFFFFF;
     --color-accent: #FF5E0E;
+    --color-accent-primary:#B22222;
+    --color-accent-secondary:#8B4000;
+    --color-border-color:#4a5565;
+    --color-accent-text:#F8F9FA;
 
     --font-nunito: 'Nunito', sans-serif;
   }
@@ -19,6 +23,10 @@
     --color-background: #000000;
     --color-foreground: #2B2B2B;
     --color-accent: #FF5E0E;
+    --color-accent-primary:#B22222;
+    --color-accent-secondary:#8B4000;
+    --color-border-color:#4a5565;
+    --color-accent-text:#F8F9FA;
   }
 
   .themeOscar {
@@ -27,6 +35,9 @@
     --color-background: #F4B4A5;
     --color-foreground: #E63946;
     --color-accent: #1E1E1E;
+    --color-accent-primary:#B22222;
+    --color-accent-secondary:#8B4000;
+    --color-border-color:#4a5565;
   }
 }
 

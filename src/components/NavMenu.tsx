@@ -6,10 +6,10 @@ const NavMenu = ({ active, onSelect, open, onClose }: NavMenuProps) => {
     return(
         <aside
             id="navbar"
-            className={`w-[250px] fixed right-0 top-0 h-full lg:h-auto bg-[#2B2B2B] rounded-2xl shadow-xl p-4 transform transition-transform duration-300 z-30 ease-in-out  
+            className={`w-[250px] fixed right-0 top-0 h-full lg:h-auto bg-[var(--color-foreground)] rounded-2xl shadow-xl p-4 transform transition-transform duration-300 z-30 ease-in-out  
             ${open ? 'translate-x-0' : 'translate-x-full'} lg:relative lg:translate-x-0 lg:w-64 lg:block` }
         >
-            <button onClick={onClose} className="block lg:hidden text-right w-full mb-4 text-gray-400">
+            <button onClick={onClose} className="block lg:hidden text-right w-full mb-4 text-[var(--color-secondary)]">
                 &times; Close
             </button>
             <nav>
@@ -18,7 +18,7 @@ const NavMenu = ({ active, onSelect, open, onClose }: NavMenuProps) => {
                         <li key={id}>
                             <button
                                 onClick={() => onSelect(id)}
-                                className={`w-full text-left px-4 py-2 rounded-md transition ${active === id ? 'bg-gray-700 text-white' : 'text-gray-300 hover:bg-gray-600 hover:text-white'}`}  
+                                className={`w-full text-left px-4 py-2 rounded-md transition ${active === id ? 'bg-[var(--color-accent-primary)] text-[var(--color-accent-text)]' : 'text-[var(--color-secondary)] hover:bg-[var(--color-accent-secondary)] hover:text-[var(--color-accent-text)]'}`}  
                             >
                                 {label}
                             </button>
