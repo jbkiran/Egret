@@ -16,3 +16,12 @@ export interface NavMenuProps{
 export interface MainContentProps {
   section: SectionId;
 }
+
+export interface SectionContentItem {
+  title: string;
+  content: React.ReactNode;
+}
+
+export type SectionContentType = {
+  [key: string]: SectionContentItem;
+};
