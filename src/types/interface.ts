@@ -25,3 +25,9 @@ export interface SectionContentItem {
 export type SectionContentType = {
   [key: string]: SectionContentItem;
 };
+
+export type SkillItemType = {
+    icon: React.ElementType,
+    name: string,
+    level: number
+}
