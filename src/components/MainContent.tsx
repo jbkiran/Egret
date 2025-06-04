@@ -6,6 +6,7 @@ import ProjectsContent from "@/components/main/ProjectsContent";
 import ExperienceContent from "./main/ExperienceContent";
 import TestimonialsContent from "./main/TestimonialsContent";
 import CertificationsContent from "./main/CertificationsContent";
+import { ScrollArea, ScrollBar } from "./ui/scroll-area";
 
 export const sectionContent: SectionContentType = {
   about: {
@@ -13,7 +14,7 @@ export const sectionContent: SectionContentType = {
     content: <AboutContent />
   },
   skills: {
-    title: 'Skills',
+    title: 'Skills I Know',
     content: <SkillsContent />
   },
   projects: {
@@ -39,14 +40,17 @@ const MainContent : React.FC<MainContentProps> = memo(({ section }) => {
   const { title, content } = useMemo(() => sectionContent[section], [section]);
 
   return (
-      <main className="flex-1 bg-[var(--color-foreground)] rounded-2xl shadow-lg p-6 h-[300px] w-full sm:w-1/2 md:flex-1 sm:h-auto">
+      <main className="flex-1 bg-[var(--color-foreground)] rounded-2xl shadow-lg py-6 pl-6 h-[calc(100vh-23px)] w-full sm:w-1/2 md:flex-1 sm:h-auto">
         <section id={section}>
           <h3 className="text-xl font-bold mb-4 text-[var(--color-secondary)]">{title}</h3>
-          <div className="text-[var(--color-primary)]">
-            <div className="space-y-4">
-              {content}
-            </div>
-          </div>
+          {/* <div className="relative"> */}
+            <ScrollArea className="h-[calc(100vh-130px)] w-full px-2">
+              <div className="text-[var(--color-primary)] space-y-4 ">
+                {content}
+              </div>
+              <ScrollBar orientation="vertical" />
+            </ScrollArea>
+          {/* </div> */}
         </section>
       </main>
   );

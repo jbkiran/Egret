@@ -27,7 +27,7 @@ export type SectionContentType = {
 };
 
 export type SkillItemType = {
-    icon: React.ElementType,
+    icon: React.ReactNode,
     name: string,
     level: number
 }
