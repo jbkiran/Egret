@@ -11,7 +11,7 @@ export default function Home() {
   const [navOpen, setNavOpen] = useState(false);
 
   return (
-    <div className="gap-3 max-w-[1600px] mx-auto flex flex-col md:flex-row p-3 box-border min-h-screen">
+    <div className="gap-3 max-w-[1600px] mx-auto flex flex-col sm:flex-row p-3 box-border min-h-screen">
       
       <button
         onClick={() => setNavOpen(true)}

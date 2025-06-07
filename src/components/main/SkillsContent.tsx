@@ -1,6 +1,6 @@
 import React from 'react'
 import { BiLogoJavascript, BiLogoMongodb, BiLogoTypescript } from 'react-icons/bi';
-import SkillWrapper from '@/components/main/SkillWrapper';
+import SkillWrapper from '@/components/main/SkillCard';
 import { SiCodeigniter, SiCss3, SiExpress, SiGraphql, SiHeadlessui, SiJquery, SiMariadb, SiMysql, SiPhp, SiRedux, SiShadcnui } from 'react-icons/si';
 import { FaAws, FaGit, FaGithub, FaHtml5, FaJsSquare, FaReact } from 'react-icons/fa';
 import { RiNextjsFill, RiTailwindCssFill } from 'react-icons/ri';
@@ -73,23 +73,14 @@ const SkillsContent = () => {
   return (
     <>
       <SkillWrapper title={'Languages :'} skills={languageSkills} />
-      <hr className="h-px my-6 bg-gray-800 border-0 w-3/4 mx-auto" />
       <SkillWrapper title={'Frontend Technologies :'} skills={frontendSkills} />
-      <hr className="h-px my-6 bg-gray-800 w-3/4 mx-auto"/>
       <SkillWrapper title={'Backend Frameworks :'} skills={backendSkills} />
-      <hr className="h-px my-6 bg-gray-800 w-3/4 mx-auto"/>
       <SkillWrapper title={'Databases :'} skills={databaseSkills} />
-      <hr className="h-px my-6 bg-gray-800 w-3/4 mx-auto"/>
       <SkillWrapper title={'State Management :'} skills={stateSkills} />
-      <hr className="h-px my-6 bg-gray-800 w-3/4 mx-auto"/>
       <SkillWrapper title={'API & Integration :'} skills={integrationSkills} />
-      <hr className="h-px my-6 bg-gray-800 w-3/4 mx-auto"/>
       <SkillWrapper title={'DevOps & Cloud :'} skills={cloudSkills} />
-      <hr className="h-px my-6 bg-gray-800 w-3/4 mx-auto"/>
       <SkillWrapper title={'Caching & Performance :'} skills={performanceSkills} />
-      <hr className="h-px my-6 bg-gray-800 w-3/4 mx-auto"/>
       <SkillWrapper title={'Version Control & Collaboration :'} skills={versionSkills} />
-      <hr className="h-px my-6 bg-gray-800 w-3/4 mx-auto"/>
       <SkillWrapper title={'UI & Component Libraries :'} skills={librarySkills} />
 
     </>
