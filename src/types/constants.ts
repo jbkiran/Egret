@@ -1,6 +1,4 @@
-import AboutContent from "@/components/main/AboutContent";
-import SkillsContent from "@/components/main/SkillsContent";
-import { SectionContentType } from "@/types/interface";
+
 
 export const navMenuItems = [
     {id: "about", label: "About"},

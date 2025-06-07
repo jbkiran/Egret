@@ -7,7 +7,7 @@ import { RiNextjsFill, RiTailwindCssFill } from 'react-icons/ri';
 import { DiNodejs, DiRedis } from 'react-icons/di';
 import { IoLogoLaravel } from 'react-icons/io5';
 import { FaSquareGitlab } from 'react-icons/fa6';
-import { MemcacheIcon } from '../ui/svg';
+// import { MemcacheIcon } from '../ui/svg';
 
 const languageSkills = [
   { icon: <FaJsSquare size={23} fill='#ffff00' stroke='white'/>, name: "JavaScript", level: 45 },

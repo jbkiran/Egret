@@ -56,4 +56,6 @@ const MainContent : React.FC<MainContentProps> = memo(({ section }) => {
   );
 });
 
+MainContent.displayName = "MainContent";
+
 export default MainContent;

@@ -4,13 +4,12 @@ import React from 'react'
 interface ProjectCardProps {
     title:string;
     company:string;
-    timeline:string;
     summary:string;
     responsibilities: string[];
     techStack:string[];
     link?:string;
 }
-const ProjectCard = ({title,company,timeline,summary,responsibilities,techStack,link}:ProjectCardProps) => {
+const ProjectCard = ({title,company,summary,responsibilities,techStack,link}:ProjectCardProps) => {
    return (
     <div className="bg-[var(--color-card)] shadow-lg rounded-2xl p-6 mb-8 border border-[var(--color-secondary)] hover:shadow-2xl transition-shadow duration-300">
         <div className="flex items-start justify-between mb-4">

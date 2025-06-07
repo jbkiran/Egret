@@ -7,7 +7,7 @@ const ProjectsContent = () => {
       <ProjectCard
         title="Tody – Patient Engagement Platform"
         company="Digicare (Client Project via Equipo)"
-        timeline="Feb 2024 – Dec 2024"
+        // timeline="Feb 2024 – Dec 2024"
         summary="A bilingual (English/Spanish) digital health tracking and patient education platform targeted at users in Puerto Rico. Designed to personalize healthcare journeys, increase engagement, and foster proactive self-care."
         responsibilities={[
           "Led a distributed dev team to architect and deliver a mobile-first web app integrated with real-time EMR data.",
@@ -24,7 +24,7 @@ const ProjectsContent = () => {
       <ProjectCard
         title="Equipo Health"
         company="Equipo Business Solutions PVT LTD"
-        timeline="Dec 2021 – Jan 2024"
+        // timeline="Dec 2021 – Jan 2024"
         summary="A next-generation integrated care delivery platform designed to bridge gaps across fragmented EMR systems, unify patient records, and empower healthcare providers with AI-driven preventive insights."
         responsibilities={[
           "Spearheaded the development of mission-critical frontend and backend modules across a scalable care delivery system.",
@@ -41,7 +41,7 @@ const ProjectsContent = () => {
       <ProjectCard
         title="Mykademy LMS"
         company="Enfin / Mykademy (Olive Group)"
-        timeline="2018 – 2021 (Enfin), 2021 – 2022 (Mykademy)"
+        // timeline="2018 – 2021 (Enfin), 2021 – 2022 (Mykademy)"
         summary="A robust, multi-tenant Learning Management System enabling educators and institutions to launch personalized e-learning platforms with content authoring, live sessions, and analytics."
         responsibilities={[
           "Core team contributor from product inception through acquisition by Olive Group.",
@@ -58,7 +58,7 @@ const ProjectsContent = () => {
       <ProjectCard
         title="Skill Delivery Platform of Kerala (SDPK)"
         company="Enfin Technologies in collaboration with ICTAK"
-        timeline="2017 (6 months)"
+        // timeline="2017 (6 months)"
         summary="A state-sponsored Learning Management System (LMS) developed for the Government of Kerala to deliver high-quality, technology-enabled skill training to students across 150 engineering colleges. The platform aimed to bridge academia-industry gaps via centralized course delivery, live sessions, and high-capacity student engagement."
         responsibilities={[
         "Contributed as a core full-stack developer, involved from inception to deployment in a high-stakes, time-constrained environment.",
