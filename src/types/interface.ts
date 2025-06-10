@@ -31,3 +31,14 @@ export type SkillItemType = {
     name: string,
     level: number
 }
+
+export interface Testimonials{
+  id: number;
+  name: string;
+  role: string;
+  content: string;
+}
+
+export type TestimonialsType = {
+  testimonialData:Testimonials
+}
