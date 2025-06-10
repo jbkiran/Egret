@@ -6,7 +6,7 @@ export const navMenuItems = [
     {id: "projects", label: "Projects"},       
     {id: "experience", label: "Experience"},
     {id: "testimonials", label: "Testimonials"},
-    {id: "certifications", label: "Certifications"},
+    {id: "certifications", label: "Recognitions"},
 ] as const;
 
 
