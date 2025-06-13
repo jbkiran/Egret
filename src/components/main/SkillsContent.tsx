@@ -7,6 +7,7 @@ import { RiNextjsFill, RiTailwindCssFill } from 'react-icons/ri';
 import { DiNodejs, DiRedis } from 'react-icons/di';
 import { IoLogoLaravel } from 'react-icons/io5';
 import { FaSquareGitlab } from 'react-icons/fa6';
+import { TbLetterS } from 'react-icons/tb';
 // import { MemcacheIcon } from '../ui/svg';
 
 const languageSkills = [
@@ -29,7 +30,7 @@ const backendSkills = [
   { icon: <SiExpress  size={30} />, name: "Express JS", level: 45 },
   { icon: <IoLogoLaravel  size={30} fill='#f72c1f'/>, name: "Laravel", level: 45 },
   { icon: <SiCodeigniter  size={20} fill='#e74122'/>, name: "CodeIgniter", level: 45 },
-  { icon: <BiLogoJavascript size={20} />, name: "Slim", level: 45 },
+  { icon: <TbLetterS size={20} />, name: "Slim", level: 45 },
 ]
 
 const databaseSkills = [

@@ -1,110 +1,131 @@
-// app/components/AwardsGallery.tsx
-'use client';
-
-import { useState } from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
+import { FaTimes, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 
-interface Award {
+interface Certificate {
+  id: number;
+  imageUrl: string;
   title: string;
-  company: string;
+  organization: string;
   date: string;
-  description: string;
-  image: string;
+  description?: string;
 }
-const awards: Award[] = [
-  {
-    title: 'Best Performer of Q2 2023',
-    company: 'Equipo Business Solutions Pvt Ltd',
-    date: 'Jun 2023',
-    description:
-      'Led delivery of patient-tracking MVP in under 3 months, earning 95% user satisfaction.',
-    image: '/awards/q2-2023-certificate.jpg',
-  },
-  {
-    title: 'Employee of the Quarter, Q4 2021',
-    company: 'Mykademy Learning Pvt Ltd',
-    date: 'Dec 2021',
-    description:
-      'Instrumental in architecting a multi-tenant LMS, boosting new client onboarding by 40%.',
-    image: '/awards/q4-2021-certificate.jpg',
-  },
-  {
-    title: 'Star Contributor Award, Sep 2019',
-    company: 'Enfin Technologies India Pvt Ltd',
-    date: 'Sep 2019',
-    description:
-      'Built core REST APIs supporting 500K+ concurrent users for a state-level LMS.',
-    image: '/awards/sep-2019-certificate.jpg',
-  },
-];
 
-export default function AwardsGallery() {
-  const [previewImage, setPreviewImage] = useState<string | null>(null);
+const CertificatesGallery = () => {
+  const [selectedCert, setSelectedCert] = useState<Certificate | null>(null);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
-  // Prevent lightbox click from triggering close when clicking the image
-  const handlePreviewClick = (e: React.MouseEvent) => {
-    e.stopPropagation();
+  const certificates: Certificate[] = [
+    {
+      id: 1,
+      imageUrl: "/certificates/best-employee-2022.jpg",
+      title: "Employee of the Year",
+      organization: "Tech Innovations Inc.",
+      date: "Dec 2022",
+      description: "Awarded to top 1% of performers company-wide"
+    },
+    // Add your certificates here
+  ];
+
+  const openLightbox = (cert: Certificate, index: number) => {
+    setSelectedCert(cert);
+    setCurrentIndex(index);
+  };
+
+  const closeLightbox = () => setSelectedCert(null);
+
+  const navigate = (direction: 'prev' | 'next') => {
+    const newIndex = direction === 'next' 
+      ? (currentIndex + 1) % certificates.length 
+      : (currentIndex - 1 + certificates.length) % certificates.length;
+    setCurrentIndex(newIndex);
+    setSelectedCert(certificates[newIndex]);
   };
 
   return (
-    <section className="max-w-7xl mx-auto px-4 py-10">
-      <h2 className="text-3xl font-bold text-center mb-10 text-gray-800">
-        🏆 Awards & Recognition
-      </h2>
-      <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
-        {awards.map((award, idx) => (
-          <div
-            key={idx}
-            onClick={() => setPreviewImage(award.image)}
-            className="cursor-pointer bg-white rounded-2xl shadow-lg hover:shadow-xl transition"
+    <>
+      {/* Certificate Grid */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        {certificates.map((cert, index) => (
+          <div 
+            key={cert.id}
+            className="group relative cursor-pointer"
+            onClick={() => openLightbox(cert, index)}
           >
-            <div className="w-full h-60 relative">
+            <div className="aspect-[4/3] relative border border-[var(--color-border)] rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all">
               <Image
-                src={award.image}
-                alt={award.title}
-                fill
-                className="object-cover rounded-t-2xl"
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                src={cert.imageUrl}
+                alt={`${cert.title} certificate`}
+                width={150}
+                height={150}
+                className="object-cover w-full"
+                sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
               />
             </div>
-            <div className="p-4">
-              <h3 className="text-lg font-semibold text-gray-900 mb-1">{award.title}</h3>
-              <p className="text-sm text-gray-600">
-                {award.company} — <span className="text-gray-500">{award.date}</span>
+            <div className="mt-3">
+              <h4 className="font-medium text-[var(--color-primary)]">{cert.title}</h4>
+              <p className="text-sm text-[var(--color-secondary)]">
+                {cert.organization} • {cert.date}
               </p>
-              <p className="text-sm italic text-gray-700 mt-2">"{award.description}"</p>
             </div>
+            
           </div>
         ))}
       </div>
 
-      {/* Lightbox-style preview */}
-      {previewImage && (
-        <div
-          onClick={() => setPreviewImage(null)}
-          className="fixed inset-0 bg-black/80 flex items-center justify-center z-50"
-        >
-          <div
-            onClick={handlePreviewClick}
-            className="relative max-w-5xl w-full p-4"
+      {/* Lightbox */}
+      {selectedCert && (
+        <div className="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center p-4">
+          <button 
+            onClick={closeLightbox}
+            className="absolute top-6 right-6 text-white text-2xl"
+            aria-label="Close certificate view"
           >
-            <Image
-              src={previewImage}
-              alt="Certificate Preview"
-              width={900}
-              height={600}
-              className="rounded-xl mx-auto max-h-[90vh] object-contain"
-            />
-            <button
-              onClick={() => setPreviewImage(null)}
-              className="absolute top-4 right-6 text-white text-4xl font-bold"
-              aria-label="Close preview"
-            >
-              &times;
-            </button>
+            <FaTimes />
+          </button>
+          
+          <button 
+            onClick={() => navigate('prev')}
+            className="absolute left-6 text-white text-2xl md:left-12"
+            aria-label="Previous certificate"
+          >
+            <FaChevronLeft size={28} />
+          </button>
+          
+          <div className="max-w-4xl w-full">
+            <div className="relative aspect-[4/3] bg-white p-1 rounded-lg shadow-xl">
+              <Image
+                src={selectedCert.imageUrl}
+                alt={`${selectedCert.title} certificate`}
+                width={600}
+                height={600}
+                className="object-contain w-full"
+                quality={100}
+                priority
+              />
+            </div>
+            <div className="mt-4 text-white text-center">
+              <h3 className="text-xl font-bold">{selectedCert.title}</h3>
+              <p className="text-[var(--color-secondary)]">
+                {selectedCert.organization} • {selectedCert.date}
+              </p>
+              {selectedCert.description && (
+                <p className="mt-2 max-w-2xl mx-auto">{selectedCert.description}</p>
+              )}
+            </div>
           </div>
+          
+          <button 
+            onClick={() => navigate('next')}
+            className="absolute right-6 text-white text-2xl md:right-12"
+            aria-label="Next certificate"
+          >
+            <FaChevronRight size={28} />
+          </button>
         </div>
       )}
-    </section>
+    </>
   );
-}
+};
+
+export default CertificatesGallery;
