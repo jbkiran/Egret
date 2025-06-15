@@ -10,7 +10,7 @@ import { ScrollArea, ScrollBar } from "./ui/scroll-area";
 
 export const sectionContent: SectionContentType = {
   about: {
-    title: 'About Me',
+    title: '',
     content: <AboutContent />
   },
   skills: {
