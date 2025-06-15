@@ -12,7 +12,7 @@ export const navMenuItems = [
 
 export const profileData = {
   name: "Kiran JB",
-  title: "Senior Software Engineer",
+  title: "Senior Fullstack Developer",
   email: "kiranjb@hotmail.com",
   phone: "+91-9633770528",
   location: "Thiruvananthapuram",

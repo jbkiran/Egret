@@ -8,7 +8,7 @@ const AboutContent = () => {
       <div className="text-left space-y-4">
         <h1 className="text-5xl font-bold leading-tight text-[var(--color-primary)]">
           <span className="text-[var(--color-secondary)]">Hi, I’m </span>
-          <Typewriter words={['Kiran JB. ']} cursorStyle={"_"} typeSpeed={60} deleteSpeed={0} delaySpeed={1000} cursor/>
+          <Typewriter words={['Kiran JB.']} cursorStyle={"_"} typeSpeed={60} deleteSpeed={0} delaySpeed={1000} cursor/>
         </h1>
       </div>
 
@@ -39,10 +39,6 @@ const AboutContent = () => {
           <strong className="text-[var(--color-accent)]">Engineering Discipline:</strong> Emphasizing clean code, robust testing, and high standards in every line I write.
         </li>
       </ul>
-
-      <p className="text-base text-[var(--color-primary)] leading-relaxed text-justify">
-        Currently, I’m expanding my expertise in architecture and system design to deepen my full-stack capabilities and contribute at a strategic level.
-      </p>
       
       <p className="text-base text-[var(--color-primary)] leading-relaxed mt-6">
         I’m eager to partner with forward‑thinking teams that value innovation, craftsmanship, and long‑term impact. Let’s build the next generation of powerful software together!
