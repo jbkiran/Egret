@@ -12,7 +12,7 @@ const TestimonialsCard = ({testimonialData}:TestimonialsType) => {
           </div>
           <div>
             <p className="text-[var(--color-primary)] italic mb-4">
-                "{testimonialData.content}"
+                &ldquo;{testimonialData.content}&rdquo;
             </p>
             <div className="border-t border-[var(--color-border-color)] pt-3">
               <div className="float-start">
