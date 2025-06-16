@@ -13,6 +13,7 @@ const Profile = () => {
                     height={250}
                     // placeholder="blur"
                     className="w-full h-full object-cover"
+                    loading="lazy"
                 />             
             </div>
             <div className="bg-[var(--color-foreground)] md:w-[250px] sm:w-full rounded-2xl shadow-lg flex-1 p-4 text-center flex flex-col relative">

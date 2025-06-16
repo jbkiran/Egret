@@ -1,27 +1,4 @@
-// import React from 'react'
-
-// const ExperienceContent = () => {
-//   return (
-//     <div className="relative border-l border-gray-300 dark:border-gray-700 ml-4">
-//       {timelineData.map((item, index) => (
-//         <div key={index} className="mb-10 ml-6">
-//           <span className="absolute flex items-center justify-center w-6 h-6 bg-blue-600 rounded-full -left-3 ring-8 ring-white dark:ring-gray-900">
-//             {/* <FaCheckCircle className="text-white text-sm" /> */}
-//           </span>
-//           <h3 className="text-lg font-semibold text-gray-900 dark:text-white">{item.title}</h3>
-//           <time className="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
-//             {item.date}
-//           </time>
-//           <p className="text-base font-normal text-gray-600 dark:text-gray-300">
-//             {item.description}
-//           </p>
-//         </div>
-//       ))}
-//     </div>
-//   );
-// }
-
-
+import React from 'react'
 
 const ExperienceContent = () => {
   const items = [
@@ -54,7 +31,7 @@ const ExperienceContent = () => {
   return (
     <div className="relative max-w-5xl mx-auto px-4 py-12">
   {/* Timeline vertical line at fixed position */}
-  <div className="absolute left-[7vh] top-0 h-full w-1 bg-[var(--color-secondary)] z-0" />
+  <div className="absolute left-[7vh] h-full w-1 bg-[var(--color-secondary)] z-0" />
 
   <div className="space-y-20 relative">
     {items.map((item, index) => (

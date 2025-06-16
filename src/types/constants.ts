@@ -16,7 +16,7 @@ export const profileData = {
   email: "kiranjb@hotmail.com",
   phone: "+91-9633770528",
   location: "Thiruvananthapuram",
-  profileImage: "profile.webp",
+  profileImage: "profile.jpg",
   resumeUrl: "resume2025.pdf",
   socialLinks: {
     linkedin: "https://linkedin.com/in/jbkiran",
