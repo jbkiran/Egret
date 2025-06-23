@@ -35,8 +35,9 @@ export type SkillItemType = {
 export interface Testimonials{
   id: number;
   name: string;
-  role: string;
-  content: string;
+  position: string;
+  testimonial: string;
+  company:string;
 }
 
 export type TestimonialsType = {
