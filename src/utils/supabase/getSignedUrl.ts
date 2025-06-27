@@ -1,4 +1,4 @@
-import { supabase } from "@/libs/supabase";
+import { supabase } from "@/libs/supabase/supabase";
 import { NextResponse } from "next/server";
 
 export async function getSignedUrl(path:string){

@@ -1,6 +1,6 @@
 import React from 'react'
 import ProjectCard from './ProjectCard'
-import { useProjects } from '@/libs/hooks/portfolioSlice'
+import { useProjects } from '@/libs/supabase/hooks/portfolioSlice'
 import ProjectSkeleton from '@/components/skeleton/ProjectSkeleton';
 
 const ProjectsContent = () => {

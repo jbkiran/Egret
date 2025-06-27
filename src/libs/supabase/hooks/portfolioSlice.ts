@@ -1,5 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
-import { getProjects, getTestimonials } from "@/libs/queries";
+import { getProjects, getTestimonials } from "@/libs/supabase/queries";
 
 
 

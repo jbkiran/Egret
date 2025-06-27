@@ -3,10 +3,10 @@ import { memo, useMemo } from "react";
 import AboutContent from "@/components/main/AboutContent";
 import SkillsContent from "@/components/main/SkillsContent";
 import ProjectsContent from "@/components/main/ProjectsContent";
-import ExperienceContent from "./main/ExperienceContent";
-import TestimonialsContent from "./main/TestimonialsContent";
-import CertificationsContent from "./main/CertificationsContent";
-import { ScrollArea, ScrollBar } from "./ui/scroll-area";
+import ExperienceContent from "@/components/main/ExperienceContent";
+import TestimonialsContent from "@/components/main/TestimonialsContent";
+import CertificationsContent from "@/components/main/CertificationsContent";
+import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 
 export const sectionContent: SectionContentType = {
   about: {

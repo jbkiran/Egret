@@ -1,4 +1,4 @@
-import { supabase } from "@/libs/supabase"
+import { supabase } from "@/libs/supabase/supabase"
 
 export async function getTestimonials() {
 
