@@ -43,3 +43,17 @@ export interface Testimonials{
 export type TestimonialsType = {
   testimonialData:Testimonials
 }
+
+interface ProjectCardProps {
+    id:number;
+    project_title:string;
+    company:string;
+    description:string;
+    responsibilities: string[];
+    tech_stack:string[];
+    project_link?:string;
+}
+
+export type ProjectType = {
+  project:ProjectCardProps
+}
