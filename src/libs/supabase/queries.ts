@@ -22,3 +22,15 @@ export async function getProjects() {
 
   return data;
 }
+
+export async function getExperiences(){
+
+  const { data, error } = await supabase
+  .from('experiences')
+  .select('id, designation, company, location, from, to')
+  .order('id',{ascending:false});
+
+  if(error) throw new Error(error.message);
+
+  return data;
+}

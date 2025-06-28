@@ -57,3 +57,16 @@ interface ProjectCardProps {
 export type ProjectType = {
   project:ProjectCardProps
 }
+
+interface ExperienceProps{
+  id : number;
+  designation : string;
+  company : string;
+  location: string;
+  from: string;
+  to: string;
+}
+
+export type ExperienceType = {
+  experience : ExperienceProps
+}
