@@ -40,7 +40,8 @@ const MainContent : React.FC<MainContentProps> = memo(({ section }) => {
   const { title, content } = useMemo(() => sectionContent[section], [section]);
 
   return (
-      <main className="flex-1 min-w-0 bg-[var(--color-foreground)] rounded-2xl shadow-lg py-6 pl-6 h-[calc(100vh-23px)] w-full sm:w-1/2 md:flex-1 sm:h-auto">
+      // <main className="flex-1 min-w-0 bg-[var(--color-foreground)] rounded-2xl shadow-lg py-6 pl-6 h-[calc(100vh-23px)] w-full sm:w-1/2 md:flex-1 sm:h-auto">
+      <main className="flex-1 bg-[var(--color-foreground)] rounded-2xl shadow-lg p-6 h-auto md:h-auto md:flex-1 sm:h-auto">
         <section id={section}>
           <h3 className="text-xl font-bold mb-4 text-[var(--color-secondary)]">{title}</h3>
           {/* <div className="relative"> */}

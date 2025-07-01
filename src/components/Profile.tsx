@@ -4,7 +4,7 @@ import Image from 'next/image';
 const Profile = () => {
 
     return (
-        <aside className="flex flex-col md:w-[250px] sm:w-full gap-3">
+        <aside className="flex flex-col md:w-[250px] gap-3 sm:w-[35%]">
             <div className="md:w-[250px] sm:w-full rounded-2xl shadow-lg flex-1 overflow-hidden hidden sm:block">
                 <Image
                     src={`/images/${profileData.profileImage}`}
