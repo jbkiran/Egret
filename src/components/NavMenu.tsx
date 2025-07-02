@@ -7,7 +7,7 @@ const NavMenu = ({ active, onSelect, open, onClose }: NavMenuProps) => {
         <aside
             id="navbar"
             className={`lg:block w-[250px] fixed lg:relative right-0 top-0 h-full lg:h-auto bg-[var(--color-foreground)] rounded-2xl shadow-lg p-4 transform transition-transform duration-300 z-30 ease-in-out 
-            ${open ? 'translate-x-0' : 'translate-x-full'}` }
+            ${open ? 'translate-x-0' : 'translate-x-full'} lg:translate-x-0` }
         >
             <button onClick={onClose} className="block lg:hidden text-right w-full mb-4 text-[var(--color-secondary)]">
                 &times; Close
