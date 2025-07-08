@@ -4,6 +4,7 @@ import NavMenu from "@/components/NavMenu";
 import Profile from "@/components/Profile";
 import { SectionId } from "@/types/interface";
 import { useState } from "react";
+import { Toaster } from "sonner";
 
 export default function Home() {
 
@@ -32,7 +33,7 @@ export default function Home() {
         open={navOpen}
         onClose={() => setNavOpen(false)}
       />
-
+      <Toaster position="top-right" />
     </div>
   );
 }

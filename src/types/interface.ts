@@ -61,12 +61,19 @@ export type ProjectType = {
 interface ExperienceProps{
   id : number;
   designation : string;
-  company : string;
-  location: string;
-  from: string;
-  to: string;
+  company   : string;
+  location  : string;
+  from  : string;
+  to    : string;
 }
 
 export type ExperienceType = {
   experience : ExperienceProps
+}
+
+export type DownloadType = {
+    bucket      : string;
+    fileName    : string;
+    onSuccess?  : () => void;
+    onError?    : (error : Error) => void;
 }

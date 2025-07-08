@@ -13,7 +13,7 @@ const ExperienceContent = () => {
     <div className="relative max-w-5xl mx-auto px-4 py-12">
       <div className="absolute left-[7vh] h-full w-1 bg-[var(--color-secondary)] z-0" />
       <div className="space-y-18 relative">
-        {experiences.map((experience, index) => (
+        {experiences.map((experience) => (
           <ExperienceCard key={experience.id} experience={experience} />
         ))}
       </div>
