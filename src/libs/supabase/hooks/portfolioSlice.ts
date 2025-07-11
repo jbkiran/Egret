@@ -1,5 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
-import { getExperiences, getProjects, getTestimonials } from "@/libs/supabase/queries";
+import { getExperiences, getProjects, getSkills, getTestimonials } from "@/libs/supabase/queries";
 
 
 
@@ -27,6 +27,16 @@ export function useExperience(){
   return useQuery({
     queryKey : ['experiences'],
     queryFn : getExperiences,
+    staleTime: 60 * 1000,
+    retry : 1,
+    refetchOnWindowFocus: false
+  });
+}
+
+export function useSkills(){
+  return useQuery({
+    queryKey : ['skills'],
+    queryFn : getSkills,
     staleTime: 60 * 1000,
     retry : 1,
     refetchOnWindowFocus: false

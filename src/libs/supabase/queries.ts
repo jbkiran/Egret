@@ -34,3 +34,23 @@ export async function getExperiences(){
 
   return data;
 }
+
+export async function getSkills(){
+
+  const { data, error } = await supabase
+  .from('skills_category')
+  .select(`
+    id,
+    category,
+    skills:skills(
+      id,
+      skill_name,
+      icon
+    )
+  `)
+  .order('id', { ascending: true });
+
+  if(error) throw new Error(error.message);
+
+  return data;
+}

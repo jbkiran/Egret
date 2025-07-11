@@ -77,3 +77,34 @@ export type DownloadType = {
     onSuccess?  : () => void;
     onError?    : (error : Error) => void;
 }
+
+export type IconProps = {
+    name:string;
+    fill?:string;
+    size?: number;
+    className?:string;
+    stroke?:string;
+}
+
+interface SkillIcon {
+  fill: string;
+  stroke?: string;
+  iconName: string;
+}
+
+interface Skill {
+  id: number;
+  icon: SkillIcon;
+  skill_name: string;
+}
+
+export interface SkillWrapperSection {
+  id: number;
+  category: string;
+  skills: Skill[];
+}
+
+export type SkillType = {
+  title : string;
+  skills : Skill[]
+}
