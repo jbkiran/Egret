@@ -1,6 +1,6 @@
 import React from 'react';
-import TestimonialsCard from './TestimonialsCard';
-import { useTestimonials } from '@/libs/hooks/portfolioSlice';
+import TestimonialsCard from '@/components/main/TestimonialsCard';
+import { useTestimonials } from '@/libs/supabase/hooks/portfolioSlice';
 import TestimonialSkeleton from '@/components/skeleton/TestimonialSkeleton';
 
 const TestimonialsContent = () => {

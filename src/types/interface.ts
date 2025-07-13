@@ -43,3 +43,89 @@ export interface Testimonials{
 export type TestimonialsType = {
   testimonialData:Testimonials
 }
+
+interface ProjectCardProps {
+    id:number;
+    project_title:string;
+    company:string;
+    description:string;
+    responsibilities: string[];
+    tech_stack:string[];
+    project_link?:string;
+}
+
+export type ProjectType = {
+  project:ProjectCardProps
+}
+
+interface ExperienceProps{
+  id : number;
+  designation : string;
+  company   : string;
+  location  : string;
+  from  : string;
+  to    : string;
+}
+
+export type ExperienceType = {
+  experience : ExperienceProps
+}
+
+export type DownloadType = {
+    bucket      : string;
+    fileName    : string;
+    onSuccess?  : () => void;
+    onError?    : (error : Error) => void;
+}
+
+export type IconProps = {
+    name:string;
+    fill?:string;
+    size?: number;
+    className?:string;
+    stroke?:string;
+}
+
+interface SkillIcon {
+  fill: string;
+  stroke?: string;
+  iconName: string;
+}
+
+interface Skill {
+  id: number;
+  icon: SkillIcon;
+  skill_name: string;
+}
+
+export interface SkillWrapperSection {
+  id: number;
+  category: string;
+  skills: Skill[];
+}
+
+export type SkillType = {
+  title : string;
+  skills : Skill[]
+}
+
+export interface Certificate {
+  id: number;
+  imageUrl: string;
+  title: string;
+  organisation: string;
+  date_of_award: string;
+  description?: string;
+}
+
+export type LightboxProps = {
+  certificate: Certificate; 
+  onClose: () => void; 
+  onPrev: () => void; 
+  onNext: () => void; 
+}
+
+export type CertificateProps = {
+  certificate: Certificate; 
+  onClick: () => void; 
+}

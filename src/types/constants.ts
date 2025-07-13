@@ -6,7 +6,7 @@ export const navMenuItems = [
     {id: "projects", label: "Projects"},       
     {id: "experience", label: "Experience"},
     {id: "testimonials", label: "Testimonials"},
-    {id: "certifications", label: "Recognitions"},
+    {id: "certifications", label: "Certifications"},
 ] as const;
 
 
@@ -16,7 +16,7 @@ export const profileData = {
   email: "kiranjb@hotmail.com",
   phone: "+91-9633770528",
   location: "Thiruvananthapuram",
-  profileImage: "profile.jpg",
+  profileImage: "profile.avif",
   resumeUrl: "resume2025.pdf",
   socialLinks: {
     linkedin: "https://linkedin.com/in/jbkiran",
