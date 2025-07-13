@@ -108,3 +108,24 @@ export type SkillType = {
   title : string;
   skills : Skill[]
 }
+
+export interface Certificate {
+  id: number;
+  imageUrl: string;
+  title: string;
+  organisation: string;
+  date_of_award: string;
+  description?: string;
+}
+
+export type LightboxProps = {
+  certificate: Certificate; 
+  onClose: () => void; 
+  onPrev: () => void; 
+  onNext: () => void; 
+}
+
+export type CertificateProps = {
+  certificate: Certificate; 
+  onClick: () => void; 
+}

@@ -30,7 +30,7 @@ export const sectionContent: SectionContentType = {
     content: <TestimonialsContent />
   },
   certifications: {
-    title: 'Awards & Recognitions',
+    title: 'Certifications & Recognitions',
     content: <CertificationsContent />
   },
 };

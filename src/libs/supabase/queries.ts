@@ -54,3 +54,15 @@ export async function getSkills(){
 
   return data;
 }
+
+export async function getRecognitions(){
+
+  const { data, error } = await supabase
+  .from('recognitions')
+  .select('id, imageUrl, title, organisation, description, date_of_award')
+  .order('id',{ascending:false});
+
+  if(error) throw new Error(error.message);
+
+  return data;
+}
