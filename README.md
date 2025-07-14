@@ -1,12 +1,17 @@
-# 🛠️ My Next.js App
+# 🛠️ Egret - Developer Portfolio
+  A modern, performance-driven developer portfolio built to showcase my experience, skills, and projects in a clean, interactive format. Designed with a strong focus on usability, responsiveness, and modular architecture to reflect my engineering principles.
 
 This is a modern web application built using:
 
-- ✅ **Next.js 14+**
+- ✅ **Next.js 15+**
 - ✅ **TypeScript**
 - ✅ **Tailwind CSS**
 - ✅ **App Router**
 - ✅ **Turbopack (Next.js Dev Compiler)**
+- ✅ **PostgreSQL**
+- ✅ **Supabase**
+- ✅ **Vercel**
+- ✅ **React Query**
 
 ## 🚀 Getting Started
 
@@ -47,13 +52,12 @@ my-nextjs-app/
 
 ## ✨ Features
 
-- App Router (Next.js 13/14+)
-- TypeScript support
-- Tailwind CSS styling
-- ESLint + Prettier ready
-- Alias imports (e.g., `@/components`)
-- TurboPack for fast dev build
-
+ - Developed with Next.js 15 App Router, React 19, and Tailwind CSS,ensuring a fast, responsive, and scalable structure.
+ - Integrated Supabase for file storage and PostgreSQL database for managing content such as testimonials, project details, experience and skills.
+ - Structured content dynamically using TanStack React Query with SSR and client-side hydration for smooth and seamless user experience.
+ - Implemented reusable and optimized code structure with utility-first styling and accessibility in mind.
+ - Features detailed About, Experience, Projects, Skills, and Testimonials sections, each modular and data-driven.
+ - Deployed in Vercel Environment 
 ---
 
 ## 🧩 Scripts
@@ -86,8 +90,8 @@ See `LICENSE` file for more info.
 
 ## 🙋‍♂️ Author
 
-**Kiran JB** – [ https://github.com/jbkiran ]
+**Kiran JB** – [https://www.linkedin.com/in/jbkiran/]
 
 ## Visit the Website
 
-[https://kiran-portfolio-nr3xuddq1-kiran-jbs-projects.vercel.app/]
+[https://kiran-portfolio-beryl.vercel.app/]
