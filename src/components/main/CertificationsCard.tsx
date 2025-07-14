@@ -1,4 +1,4 @@
-import React, { useState, useCallback, memo } from 'react';
+import React, { memo } from 'react';
 import Image from 'next/image';
 import { CertificateProps } from '@/types/interface';
 import { getPublicFileUrl } from '@/libs/supabase/getSupabaseUrls';
@@ -24,5 +24,7 @@ const CertificationsCard = memo(({ certificate, onClick }: CertificateProps ) =>
     </div>
   </div>
 ));
+
+CertificationsCard.displayName = 'CertificationsCard';
 
 export default CertificationsCard;
